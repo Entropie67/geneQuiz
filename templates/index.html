@@ -6,6 +6,20 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1> Mon générateur de quiz</h1>
+    <h1> Bonjour {{nom}} Mon générateur de quiz</h1>
+    <h2>Questionnaire :</h2>
+    <ol>
+        {% for question in questions%}
+            <li>
+                <h3>{{question[0]}}</h3>
+                <ol>
+                   {% for proposition in question[1:]%}
+                        <li>{{proposition}}</li>
+                    {% endfor %}
+                </ol>
+            </li>
+
+        {% endfor %}
+    </ol>
 </body>
 </html>

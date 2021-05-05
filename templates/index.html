@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1> Bonjour {{nom}} mon générateur de quiz</h1>
+    <h1> Générateur de quiz</h1>
     <form action="http://localhost:5000/resultat" method="post">
         <h2>Questionnaire :</h2>
         <ol>
@@ -26,7 +26,7 @@
 
             {% endfor %}
         </ol>
-        <input type="submit" value="Envoyer les réponses">
+        <input type="submit" id="validation" value="Envoyer les réponses">
     </form>
 </body>
 </html>
